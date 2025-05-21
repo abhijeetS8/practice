@@ -13,10 +13,10 @@ public class EmpSal {
         Optional<Integer> secondHighest = salaries.stream()
                                         .distinct()                             // Remove duplicates
                                         .sorted(Comparator.reverseOrder())      // Descending order
-                                        .skip(2)                                 // Skip highest
+                                        .skip(1)                                 // Skip highest
                                         .findFirst();                            // Get second highest
 
-    //secondHighest.ifPresent(sal -> 
-        System.out.println("Second highest salary: " + secondHighest);
+       secondHighest.ifPresent(sal -> 
+        System.out.println("Second highest salary: " + sal));
 	}
 }
